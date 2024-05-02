@@ -1,0 +1,126 @@
+:root {
+   --backgroundColor: #f7f7f7;
+   --accentColor: #3273ff;
+   --secondColor: #53034f;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-size: 18px;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   padding-top: 30px;
+   min-width: 320px;
+
+   counter-reset: cnt;
+}
+.title {
+   text-align: center;
+}
+.title:not(:last-child),
+.section:not(:last-child) {
+   margin-bottom: 50px;
+}
+.section {
+   padding: 20px;
+   border-radius: 5px;
+   background-color: var(--backgroundColor);
+   border-radius: 15px;
+   max-width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+
+   counter-increment: cnt;
+}
+.section__title::before {
+   content: "#" counter(cnt) ". ";
+}
+.section__title:not(:last-child) {
+   margin-bottom: 30px;
+}
+button {
+   outline: none;
+   cursor: pointer;
+   border: 1px solid #000;
+}
+/* =========== */
+.spoller {
+}
+.spoller p {
+   margin-bottom: 5px;
+}
+.spoller__descr {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+}
+.spoller__title {
+   width: 100%;
+   display: block;
+   padding: 15px 10px;
+   font-family: inherit;
+   font-size: 20px;
+   background-color: var(--accentColor);
+   color: var(--backgroundColor);
+
+   border-radius: 4px;
+   transition: box-shadow 0.2s ease-in-out 0s;
+}
+.spoller__title:focus,
+.spoller__arrow:focus {
+   outline: 1px solid #000;
+}
+.spoller__title:hover,
+.spoller__arrow:hover {
+   box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.spoller__arrow {
+   flex: 0 0 50;
+   width: 50px;
+   height: 50px;
+   border-radius: 2px;
+   background-color: var(--accentColor);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.spoller__arrow::before {
+   content: "";
+
+   width: 20px;
+   height: 20px;
+   border-top: 2px solid var(--backgroundColor);
+   border-right: 2px solid var(--backgroundColor);
+   border-radius: 1px;
+
+   rotate: 135deg;
+
+   transition: rotate 0.2s ease-in-out 0s;
+}
+.spoller__arrow.spoller-active::before {
+   rotate: -45deg;
+}
+
+.spoller__body {
+   padding: 10px;
+   margin-top: 5px;
+   background-color: #d3adad;
+   border-radius: 3px;
+}
+.spoller__body:not(:last-child) {
+   margin-bottom: 5px;
+}
+.spoller__body > .spoller__body {
+   border: 1px solid var(--backgroundColor);
+}
+.spoller__line {
+   padding: 20px 10px;
+   border-radius: 3px;
+   border: 1px solid var(--accentColor);
+   margin-top: 5px;
+   margin-bottom: 5px;
+}

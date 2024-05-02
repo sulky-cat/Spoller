@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Spoller</title>
+</head>
+
+<body>
+   <div>
+      <h1 class="title">Примеры</h1>
+
+      <section id="ex_1" class="section">
+         <h2 class="section__title">Обычное поведение</h2>
+         <div data-spoller class="spoller">
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+
+            <div class="spoller__line">
+               <p>Спойлер внутри обертки</p>
+               <button data-spoller-title class="spoller__title spoller-active" type="button">Нажми на меня</button>
+               <div data-spoller-body class="spoller__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi consequuntur reiciendis, accusamus ipsum officia sapiente corrupti, ex sunt optio ad accusantium. Animi, natus atque aliquid repudiandae itaque maiores maxime!
+               </div>
+            </div>
+
+            <p>Спойлер внутри спойлера</p>
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, facilis.
+               <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+               <div data-spoller-body class="spoller__body">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum temporibus architecto esse deserunt deleniti! Excepturi, labore odit. Asperiores, placeat quibusdam.
+               </div>
+            </div>
+
+            <div class="spoller__line">
+               <div class="spoller__descr">
+                  <p>Спойлер внутри обертки, активна отдельная кнопка</p>
+                  <button data-spoller-title class="spoller__arrow spoller-active" type="button"></button>
+               </div>
+               <div data-spoller-body class="spoller__body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi consequuntur reiciendis, accusamus ipsum officia sapiente corrupti, ex sunt optio ad accusantium. Animi, natus atque aliquid repudiandae itaque maiores maxime!
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="ex_2" class="section">
+         <h2 class="section__title">Активен один спойлер (аккордеон)</h2>
+         <div data-spoller data-spoller-one class="spoller">
+            <button data-spoller-title class="spoller__title spoller-active" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+         </div>
+      </section>
+      <section id="ex_3" class="section">
+         <h2 class="section__title">Активен один спойлер (открытие нового происходит после закрытия предыдущего)</h2>
+         <div data-spoller data-spoller-one data-spoller-await class="spoller">
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+         </div>
+      </section>
+      <section id="ex_4" class="section">
+         <h2 class="section__title">Функции "beforeSelect" и "afterSelect".</h2>
+         <div data-spoller-func class="spoller">
+            <button type="button" data-spoller-title class="spoller__title">Наведи на меня</button>
+            <div data-duration="800" data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+            <button type="button" data-spoller-title class="spoller__title spoller-active">Наведи на меня</button>
+            <div data-duration="800" data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+            <button type="button" data-spoller-title class="spoller__title">Наведи на меня</button>
+            <div data-duration="800" data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+         </div>
+      </section>
+      <section id="ex_5" class="section">
+         <h2 class="section__title">Изменение времени</h2>
+         <div data-spoller class="spoller">
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня (1000 ms)</button>
+            <div data-duration="1000" data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня (500 ms)</button>
+            <div data-duration="500" data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня (800 ms)</button>
+            <div data-duration="800" data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+         </div>
+      </section>
+      <section id="ex_6" class="section">
+         <h2 class="section__title">Установка по медиазапросу (max 990px)</h2>
+         <div data-spoller data-spoller-media="max,900px" class="spoller">
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae esse laboriosam quasi rerum alias officia culpa eum, earum facere dignissimos consequatur explicabo ducimus repellendus recusandae a quae totam autem mollitia.
+            </div>
+
+            <button data-spoller-title class="spoller__title spoller-active" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi consequuntur reiciendis, accusamus ipsum officia sapiente corrupti, ex sunt optio ad accusantium. Animi, natus atque aliquid repudiandae itaque maiores maxime!
+            </div>
+
+            <button data-spoller-title class="spoller__title" type="button">Нажми на меня</button>
+            <div data-spoller-body class="spoller__body">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, facilis.
+            </div>
+
+         </div>
+      </section>
+
+   </div>
+   <script type="module" src="script.js"></script>
+</body>
+
+</html>
