@@ -2,7 +2,7 @@
 
 [Демо страница](https://sulky-cat.github.io/Spoller/demo/)
 
-<img align="middle" alt="Spoller demo" src="./spoller.png">
+<img align="middle" alt="Spoller demo" src="./Spoller.png">
 
 ## Содержание
 - [Описание](#описание)
