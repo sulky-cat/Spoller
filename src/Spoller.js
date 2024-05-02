@@ -21,7 +21,7 @@ export default class Spoller {
          this.titles = Array.from(this.spoller.querySelectorAll('[data-spoller-title]'))
          this.bodies = Array.from(this.spoller.querySelectorAll('[data-spoller-body]'))
 
-         this.options = Object.assign(Spoller.defaultOptions, options)
+         this.options = { ...Spoller.defaultOptions, ...options }
 
          this.one = this.spoller.hasAttribute('data-spoller-one') || this.options.one
          this.await = this.spoller.hasAttribute('data-spoller-await') || this.options.await
