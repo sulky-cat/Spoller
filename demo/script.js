@@ -13,8 +13,8 @@ if (spollerElements) {
    }))
 }
 
-const customSpoller = document.querySelector('[data-spoller-func]')
-const spoller = new Spoller(customSpoller, {
+const funcSpoller = document.querySelector('[data-spoller-func]')
+const spoller = new Spoller(funcSpoller, {
    beforeSelect: () => alert('Сработала функция beforeOpen()'),
    afterSelect: () => alert('Сработала функция afterOpen()'),
 })
